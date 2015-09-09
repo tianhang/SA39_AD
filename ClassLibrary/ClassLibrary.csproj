@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C9C89DC-4330-44CF-9D40-305DAB6FBC9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibrary</RootNamespace>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="category.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="codeGenerator.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="collectionPoint.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ApproveRejectDiscrepencyController.cs" />
+    <Compile Include="Controllers\ApproveRejectPurchaseOrderController.cs" />
+    <Compile Include="Controllers\ApproveRejectRequisitionController.cs" />
+    <Compile Include="Controllers\AssignDeputyController.cs" />
+    <Compile Include="Controllers\AssignRepresentativeController.cs" />
+    <Compile Include="Controllers\ChangeCollectionPointController.cs" />
+    <Compile Include="Controllers\CompleteDeliveryController.cs" />
+    <Compile Include="Controllers\EmergencyDisbursementController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\GenerateDisbursementController.cs" />
+    <Compile Include="Controllers\GeneratePurchaseOrderFormController.cs" />
+    <Compile Include="Controllers\GenerateStationaryRetrievalFormController.cs" />
+    <Compile Include="Controllers\GetBackAuthorityController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ManageCatalogueController.cs" />
+    <Compile Include="Controllers\ManageDeputyController.cs" />
+    <Compile Include="Controllers\ManageSuppliersController.cs" />
+    <Compile Include="Controllers\NotifyReordersController.cs" />
+    <Compile Include="Controllers\NotifyUserController.cs" />
+    <Compile Include="Controllers\RaisePurchaseOrderController.cs" />
+    <Compile Include="Controllers\ReportGeneratorController.cs" />
+    <Compile Include="Controllers\SubmitDiscrepencyController.cs" />
+    <Compile Include="Controllers\SubmitRequisitionController.cs" />
+    <Compile Include="Controllers\UpdateDeputyController.cs" />
+    <Compile Include="Controllers\UpdateStockController.cs" />
+    <Compile Include="Controllers\ViewDisbursementController.cs" />
+    <Compile Include="Controllers\ViewItemPOController.cs" />
+    <Compile Include="Controllers\ViewPurchaseOrderController.cs" />
+    <Compile Include="Controllers\ViewRequisitionController.cs" />
+    <Compile Include="department.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="disbursement.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="disbursementDetail.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="discrepancy.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\CodeGenerator.cs" />
+    <Compile Include="Entities\CollectionPoint.cs" />
+    <Compile Include="Entities\Department.cs" />
+    <Compile Include="Entities\Disbursement.cs" />
+    <Compile Include="Entities\DisbursementDetails.cs" />
+    <Compile Include="Entities\Discrepency.cs" />
+    <Compile Include="Entities\Item.cs" />
+    <Compile Include="Entities\Menu.cs" />
+    <Compile Include="Entities\PurchaseOrder.cs" />
+    <Compile Include="Entities\PurchaseOrderDetails.cs" />
+    <Compile Include="Entities\ReorderItem.cs" />
+    <Compile Include="Entities\Requisition.cs" />
+    <Compile Include="Entities\RequisitionDetails.cs" />
+    <Compile Include="Entities\Supplier.cs" />
+    <Compile Include="Entities\SupplierPrice.cs" />
+    <Compile Include="Entities\UOM.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserRole.cs" />
+    <Compile Include="EntityFacade\ApproveRejectPurchaseOrderEntityFacade.cs" />
+    <Compile Include="EntityFacade\CatalogueFacade.cs" />
+    <Compile Include="EntityFacade\DepartmentFacade.cs" />
+    <Compile Include="EntityFacade\DisbursementFacade.cs" />
+    <Compile Include="EntityFacade\DiscrepancyFacade.cs" />
+    <Compile Include="EntityFacade\HelperFacade.cs" />
+    <Compile Include="EntityFacade\LoginFacade.cs" />
+    <Compile Include="EntityFacade\MenuFacade.cs" />
+    <Compile Include="EntityFacade\PurchaseOrderReportEntityFacade.cs" />
+    <Compile Include="EntityFacade\RequisitionFacade.cs" />
+    <Compile Include="EntityFacade\RequisitionTrendEntityFacade.cs" />
+    <Compile Include="EntityFacade\StockBalanceReportEntityFacade.cs" />
+    <Compile Include="EntityFacade\SupplierFacade.cs" />
+    <Compile Include="EntityFacade\UserFacade.cs" />
+    <Compile Include="EntityFacade\ViewPurchaseOrderFacade.cs" />
+    <Compile Include="GaoFan\categoryGF.cs" />
+    <Compile Include="GaoFan\codeGeneratorGF.cs" />
+    <Compile Include="GaoFan\collectionPointGF.cs" />
+    <Compile Include="GaoFan\departmentGF.cs" />
+    <Compile Include="GaoFan\discrepancyGF.cs" />
+    <Compile Include="GaoFan\itemGF.cs" />
+    <Compile Include="GaoFan\reorderGF.cs" />
+    <Compile Include="GaoFan\requisitionGF.cs" />
+    <Compile Include="GaoFan\supplierPriceGF.cs" />
+    <Compile Include="GaoFan\userGF.cs" />
+    <Compile Include="Helper\CodeGeneratorHelper.cs" />
+    <Compile Include="Helper\DisbursementHelper.cs" />
+    <Compile Include="Helper\ErrorLog.cs" />
+    <Compile Include="Helper\newItem.cs" />
+    <Compile Include="Helper\newPrice.cs" />
+    <Compile Include="Helper\newReorderItem.cs" />
+    <Compile Include="Helper\RetrievalHelper.cs" />
+    <Compile Include="item.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="menu.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="menuByRole.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="purchaseOrder.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="purchaseOrderDetail.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="reorderItem.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="requisition.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="requisitionDetail.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="role.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPurchaseOrderData_Result.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectRequisitionByDepartmentID_Result.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectRequisitionData_Result.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectStockBalanceData_Result.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SSISDBEF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSISDBEF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SSISDBEF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SSISDBEF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSISDBEF.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="supplier.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supplierPrice.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="uomeasure.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>SSISDBEF.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DepartmentFacade_getCollectionPoints.sequencediagram" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="SSISDBEF.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SSISDBEF.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SSISDBEF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SSISDBEF.edmx</DependentUpon>
+      <LastGenOutput>SSISDBEF.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SSISDBEF.edmx.diagram">
+      <DependentUpon>SSISDBEF.edmx</DependentUpon>
+    </None>
+    <None Include="SSISDBEF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SSISDBEF.edmx</DependentUpon>
+      <LastGenOutput>SSISDBEF.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DepartmentFacade_getCollectionPoints.sequencediagram.layout">
+      <DependentUpon>DepartmentFacade_getCollectionPoints.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

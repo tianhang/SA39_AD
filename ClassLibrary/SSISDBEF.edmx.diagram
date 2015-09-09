@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e8947cfe4ba4966a99202cc7806b692" Name="Diagram1">
+        <EntityTypeShape EntityType="SSISDBModel.category" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.codeGenerator" Width="1.5" PointX="7.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.collectionPoint" Width="1.5" PointX="1.5" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.department" Width="1.5" PointX="0.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.disbursement" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.disbursementDetail" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.discrepancy" Width="1.5" PointX="8.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.item" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.menu" Width="1.5" PointX="5.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.menuByRole" Width="1.5" PointX="8" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.purchaseOrder" Width="1.5" PointX="6" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.reorderItem" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.requisition" Width="1.5" PointX="3" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.requisitionDetail" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.role" Width="1.5" PointX="0.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.supplier" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.supplierPrice" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.sysdiagram" Width="1.5" PointX="10.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.uomeasure" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.user" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSISDBModel.purchaseOrderDetail" Width="1.5" PointX="8.25" PointY="15.875" IsExpanded="true" />
+        <AssociationConnector Association="SSISDBModel.FK__item__categoryId__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__departmen__colle__20C1E124" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__disbursem__depar__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__requisiti__depar__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__user__department__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__disbursem__disbu__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__disbursem__itemI__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__discrepan__itemI__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__discrepan__suppl__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__discrepan__userI__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__item__uomId__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__purchaseO__itemI__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__reorderIt__itemI__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__requisiti__itemI__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__supplierP__itemI__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__menuByRol__menuI__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__purchaseO__purch__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__purchaseO__suppl__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__reorderIt__suppl__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__reorderIt__userI__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__requisiti__requi__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__requisiti__userI__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__user__roleId__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="SSISDBModel.FK__supplierP__suppl__2A4B4B5E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
